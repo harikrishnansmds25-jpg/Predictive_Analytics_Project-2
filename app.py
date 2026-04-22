@@ -15,26 +15,108 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+/* ── Sidebar hidden ───────────────────────────────────────────── */
+[data-testid="stSidebar"] { display: none; }
+
+/* ── Light mode (default) ─────────────────────────────────────── */
 [data-testid="stAppViewContainer"] { background: #f0f7ff; }
-[data-testid="stSidebar"]          { display: none; }
+
 .safe-box {
     background: #d4edda; border: 2px solid #28a745;
     border-radius: 14px; padding: 2rem; text-align: center;
 }
 .safe-box h2 { color: #155724; font-size: 2.2rem; margin: 0; }
 .safe-box p  { color: #155724; margin: 0.3rem 0 0; font-size: 1rem; }
+
 .unsafe-box {
     background: #f8d7da; border: 2px solid #dc3545;
     border-radius: 14px; padding: 2rem; text-align: center;
 }
 .unsafe-box h2 { color: #721c24; font-size: 2.2rem; margin: 0; }
 .unsafe-box p  { color: #721c24; margin: 0.3rem 0 0; font-size: 1rem; }
+
 .stButton > button {
     background: #1a73e8; color: white; font-weight: 700;
     border: none; border-radius: 10px;
     padding: 0.6rem 2rem; font-size: 1rem; width: 100%;
 }
 .stButton > button:hover { background: #1558b0; }
+
+/* ── Dark mode overrides ──────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+    [data-testid="stAppViewContainer"] { background: #0e1117; }
+
+    /* Streamlit auto sets dark bg, but we also fix the main content area */
+    [data-testid="stMain"]            { background: #0e1117; }
+    [data-testid="block-container"]   { background: #0e1117; }
+
+    /* General text visibility */
+    h1, h2, h3, h4, h5, h6, p, label, span, div {
+        color: #e8eaed;
+    }
+
+    .safe-box {
+        background: #1a3a2a; border: 2px solid #34c759;
+    }
+    .safe-box h2 { color: #7dff9e; }
+    .safe-box p  { color: #a8f0b8; }
+
+    .unsafe-box {
+        background: #3a1a1a; border: 2px solid #ff453a;
+    }
+    .unsafe-box h2 { color: #ff8080; }
+    .unsafe-box p  { color: #f0a8a8; }
+
+    /* Expander / card backgrounds */
+    [data-testid="stExpander"] {
+        background: #1e2329 !important;
+        border: 1px solid #2d3748 !important;
+    }
+
+    /* Info / warning / success / error boxes */
+    [data-testid="stAlert"] { background: #1e2329; }
+
+    /* File uploader area */
+    [data-testid="stFileUploader"] {
+        background: #1e2329;
+        border: 2px dashed #4a5568;
+        border-radius: 10px;
+    }
+
+    /* Dataframe / table */
+    [data-testid="stDataFrame"] { background: #1e2329; }
+
+    /* Number inputs */
+    input[type="number"] {
+        background: #1e2329 !important;
+        color: #e8eaed !important;
+        border: 1px solid #4a5568 !important;
+    }
+
+    /* Caption */
+    [data-testid="stCaptionContainer"] { color: #8b9ab0; }
+
+    /* Divider */
+    hr { border-color: #2d3748; }
+}
+
+/* ── Streamlit's own dark theme class (used when user picks Dark in the menu) */
+[data-theme="dark"] [data-testid="stAppViewContainer"],
+.st-emotion-cache-1y4p8pa[data-theme="dark"] {
+    background: #0e1117;
+}
+
+[data-theme="dark"] .safe-box {
+    background: #1a3a2a; border: 2px solid #34c759;
+}
+[data-theme="dark"] .safe-box h2 { color: #7dff9e; }
+[data-theme="dark"] .safe-box p  { color: #a8f0b8; }
+
+[data-theme="dark"] .unsafe-box {
+    background: #3a1a1a; border: 2px solid #ff453a;
+}
+[data-theme="dark"] .unsafe-box h2 { color: #ff8080; }
+[data-theme="dark"] .unsafe-box p  { color: #f0a8a8; }
 </style>
 """, unsafe_allow_html=True)
 
