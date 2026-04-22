@@ -1,15 +1,15 @@
 # Predictive_Analytics_Project-2
 Water quality Classification for Safe Drinking Prediction
-#Problem Statement
+# Problem Statement
 
 Access to safe drinking water is essential for human health. Contaminated water can cause serious diseases and environmental issues. This project aims to build a machine learning model that predicts whether water is potable (safe) or non-potable (unsafe) based on physicochemical properties.
 
-#Dataset
+# Dataset
 In this project, the Water Potability dataset is used. It contains water quality measurements with features.
 
 The dataset consists of labeled samples used to train and test the machine learning models.
 
-#Steps
+# Steps
 1. Data Preprocessing
 Handling missing values using median imputation
 Feature scaling using StandardScaler
