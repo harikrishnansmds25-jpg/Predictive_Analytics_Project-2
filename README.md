@@ -10,20 +10,24 @@ In this project, the Water Potability dataset is used. It contains water quality
 The dataset consists of labeled samples used to train and test the machine learning models.
 
 # Steps
-1. Data Preprocessing
+1. Data Preprocessing:
+   
 Handling missing values using median imputation
 Feature scaling using StandardScaler
 
-3. Feature Engineering & Selection
+3. Feature Engineering & Selection:
+   
 Created derived features (e.g., pH deviation)
 Selected important features for model performance
 
-5. Model Training
+5. Model Training:
+   
 Random Forest
 Support Vector Machine (SVM)
 XGBoost
 
-7. Evaluation
+7. Evaluation:
+   
 Accuracy
 Precision, Recall, F1-score
 Confusion Matrix
