@@ -2,7 +2,9 @@
 """
 feature_selection_water_quality.py
 
-Feature Selection stage for the Water Quality (Potability) dataset.
+Feature Selection module for the Water Quality (Potability) dataset.
+Implements a hybrid ensemble-based feature selection strategy combining
+statistical, information-theoretic, and model-based approaches.
 Runs AFTER preprocessing_water_quality.py — consumes its outputs directly
 or from saved CSV files.
 
