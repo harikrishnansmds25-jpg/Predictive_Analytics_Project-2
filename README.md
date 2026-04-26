@@ -81,19 +81,6 @@ Unsafe drinking water is a major global health concern. This project uses machin
 * Confidence score for each prediction
 * Download prediction results as CSV
 
-##  Repository Structure
-
-```text
-├── app.py
-├── requirements.txt
-├── Water_Quality_classification.ipynb
-├── feature_engineering.py
-├── models/
-├── scaler.pkl
-├── selector.pkl
-├── README.md
-└── water_quality_dataset.zip
-```
 
 ##  Deployment
 
