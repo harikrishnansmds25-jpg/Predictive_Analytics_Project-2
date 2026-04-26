@@ -1,33 +1,117 @@
-# Predictive_Analytics_Project-2
-Water quality Classification for Safe Drinking Prediction
-# Problem Statement
+# Water Quality Classification for Safe Drinking Prediction
 
-Access to safe drinking water is essential for human health. Contaminated water can cause serious diseases and environmental issues. This project aims to build a machine learning model that predicts whether water is potable (safe) or non-potable (unsafe) based on physicochemical properties.
+An end-to-end machine learning project for classifying water samples as **potable (safe to drink)** or **non-potable** using physicochemical water quality parameters.
 
-# Dataset
-In this project, the Water Potability dataset is used. It contains water quality measurements with features.
+##  Project Overview
 
-The dataset consists of labeled samples used to train and test the machine learning models.
+Unsafe drinking water is a major global health concern. This project uses machine learning to predict water potability based on key chemical and physical characteristics of water. It supports rapid screening for environmental monitoring, public health, and water resource management.
 
-# Steps
-1. Data Preprocessing:
-   
-Handling missing values using median imputation
-Feature scaling using StandardScaler
+##  Objectives
 
-3. Feature Engineering & Selection:
-   
-Created derived features (e.g., pH deviation)
-Selected important features for model performance
+* Classify water samples as Safe or Not Safe for drinking
+* Compare multiple machine learning models
+* Improve prediction using feature engineering and SMOTE
+* Deploy an interactive Streamlit web application
 
-5. Model Training:
-   
-Random Forest
-Support Vector Machine (SVM)
-XGBoost
+##  Dataset
 
-7. Evaluation:
-   
-Accuracy
-Precision, Recall, F1-score
-Confusion Matrix
+* **Source:** Kaggle Water Potability Dataset
+* **Samples:** 3,276 water samples
+* **Original Features:** 9
+* **Engineered Features:** 5
+* **Total Features:** 14
+* **Target Variable:** `Potability`
+
+  * `1` = Potable
+  * `0` = Non-potable
+
+##  Features Used
+
+**Original Features**
+
+* pH
+* Hardness
+* Solids
+* Chloramines
+* Sulfate
+* Conductivity
+* Organic Carbon
+* Trihalomethanes
+* Turbidity
+
+**Engineered Features**
+
+* ph_deviation
+* mineral_load
+* chloramines_conductivity
+* thm_per_carbon
+* turbidity_solids_ratio
+
+## Methodology
+
+1. Data preprocessing and cleaning
+2. Missing value imputation using KNN Imputer
+3. Outlier treatment using Winsorization
+4. Feature engineering
+5. Class balancing using SMOTE
+6. Feature selection using consensus ranking
+7. Model training and hyperparameter tuning
+8. Ensemble stacking
+9. Streamlit deployment
+
+##  Models Implemented
+
+* Random Forest
+* XGBoost
+* LightGBM
+* Stacking Ensemble (XGBoost + LightGBM + Random Forest)
+
+##  Best Model Performance
+
+* **Best Model:** Stacking Ensemble
+* **Accuracy:** ~82%
+* **F1-Macro:** ~0.81
+* **ROC-AUC:** ~0.87
+
+##  Streamlit Application Features
+
+* Train models directly in the browser
+* Upload CSV files for batch prediction
+* Manual single-sample prediction
+* Confidence score for each prediction
+* Download prediction results as CSV
+
+##  Repository Structure
+
+```text
+├── app.py
+├── requirements.txt
+├── Water_Quality_classification.ipynb
+├── feature_engineering.py
+├── models/
+├── scaler.pkl
+├── selector.pkl
+├── README.md
+└── water_quality_dataset.zip
+```
+
+##  Deployment
+
+Deployed using Streamlit Cloud for easy online access.
+App link: https://predictiveanalyticsproject-2app.streamlit.app/
+##  Technologies Used
+
+* Python 3.10+
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* LightGBM
+* Imbalanced-learn (SMOTE)
+* Matplotlib
+* Seaborn
+* Streamlit
+* Joblib
+
+
+
