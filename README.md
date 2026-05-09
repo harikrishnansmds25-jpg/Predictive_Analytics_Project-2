@@ -2,6 +2,14 @@
 
 An end-to-end machine learning project for classifying water samples as **potable (safe to drink)** or **non-potable** using physicochemical water quality parameters.
 
+ ## 👩‍💻 Team Members
+- HARIKRISHNAN S.M  
+- ABHITHA RAJ S R 
+- AYANA SANTHOSH KHAN
+
+## Course Details
+Predictive Analytics
+ 
 ##  Project Overview
 
 Unsafe drinking water is a major global health concern. This project uses machine learning to predict water potability based on key chemical and physical characteristics of water. It supports rapid screening for environmental monitoring, public health, and water resource management.
