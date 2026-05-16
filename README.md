@@ -313,6 +313,76 @@ App link: https://predictiveanalyticsproject-2app.streamlit.app/
 * Seaborn
 * Streamlit
 * Joblib
+## Instructions for Setting Up and Running the Project Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/water-quality-classification.git
+cd water-quality-classification
+```
+
+### 2. Create a Virtual Environment (Recommended)
+
+#### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### Mac/Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Required Dependencies
+
+Make sure Python 3.10 or above is installed on your system.
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Streamlit Application
+
+```bash
+streamlit run app.py
+```
+
+After running the command, the application will automatically open in your browser.
+
+If it does not open automatically, visit:
+
+```bash
+http://localhost:8501
+```
+
+### 5. Project Structure
+
+```text
+water-quality-classification/
+│
+├── app.py
+├── requirements.txt
+├── dataset/
+├── models/
+├── notebooks/
+├── images/
+└── README.md
+```
+
+### 6. Input Options in the Application
+
+The application supports:
+
+- Manual water parameter input
+- CSV file upload for batch prediction
+- Real-time prediction results
+- Confidence score display
+- Downloadable prediction results
 
 
 
