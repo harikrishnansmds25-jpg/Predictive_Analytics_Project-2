@@ -360,29 +360,5 @@ If it does not open automatically, visit:
 http://localhost:8501
 ```
 
-### 5. Project Structure
-
-```text
-water-quality-classification/
-│
-├── app.py
-├── requirements.txt
-├── dataset/
-├── models/
-├── notebooks/
-├── images/
-└── README.md
-```
-
-### 6. Input Options in the Application
-
-The application supports:
-
-- Manual water parameter input
-- CSV file upload for batch prediction
-- Real-time prediction results
-- Confidence score display
-- Downloadable prediction results
-
 
 
