@@ -292,6 +292,13 @@ EDA played a crucial role in improving data quality and enhancing machine learni
 
 Deployed using Streamlit Cloud for easy online access.
 App link: https://predictiveanalyticsproject-2app.streamlit.app/
+<img width="750" height="429" alt="image" src="https://github.com/user-attachments/assets/a7534694-1bb5-4b72-95ee-3c54849e7c12" />
+<img width="690" height="534" alt="image" src="https://github.com/user-attachments/assets/e3dbdb31-7b05-4466-8f85-99a863841be4" />
+<img width="675" height="493" alt="image" src="https://github.com/user-attachments/assets/5c8d12a8-3a16-46de-8ab4-cebe6e2ed484" />
+
+
+
+
 ##  Technologies Used
 
 * Python 3.10+
