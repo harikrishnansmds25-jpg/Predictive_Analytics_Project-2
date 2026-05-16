@@ -66,6 +66,204 @@ Unsafe drinking water is a major global health concern. This project uses machin
 7. Model training and hyperparameter tuning
 8. Ensemble stacking
 9. Streamlit deployment
+# Exploratory Data Analysis (EDA)
+
+Exploratory Data Analysis (EDA) was performed to understand the structure, quality, and relationships within the water quality dataset before model building.
+
+The analysis helped identify:
+
+- Missing values
+- Outliers
+- Feature distributions
+- Correlation between variables
+- Class imbalance issues
+
+---
+
+## Dataset Overview
+
+- Total Samples: 3276
+- Original Features: 9
+- Engineered Features: 5
+- Target Variable: Potability
+
+### Target Variable
+
+- 1 → Potable (Safe Drinking Water)
+- 0 → Non-potable (Unsafe Water)
+
+---
+
+# EDA Process
+
+## 1. Data Inspection
+
+Initial inspection was carried out using:
+
+```python
+df.head()
+df.info()
+df.describe()
+```
+
+### Observations
+
+- All features were numerical.
+- Some columns contained missing values.
+- Feature scales varied significantly.
+
+---
+
+## 2. Missing Value Analysis
+
+Missing values were identified using:
+
+```python
+df.isnull().sum()
+```
+
+### Features with Missing Values
+
+- pH
+- Sulfate
+- Trihalomethanes
+
+### Observation
+
+Moderate missing values were present and later handled using KNN Imputation.
+
+---
+
+## 3. Target Variable Distribution
+
+Class distribution was analyzed using count plots.
+
+```python
+sns.countplot(x='Potability', data=df)
+```
+
+### Observation
+
+- The dataset was imbalanced.
+- Non-potable samples were higher than potable samples.
+- SMOTE was used to balance the classes.
+
+---
+
+## 4. Statistical Summary
+
+Descriptive statistics were generated using:
+
+```python
+df.describe()
+```
+
+### Findings
+
+- Features like Solids and Conductivity showed high variance.
+- Several features contained extreme values.
+
+---
+
+## 5. Feature Distribution Analysis
+
+Histograms were used to analyze feature distributions.
+
+```python
+df.hist(figsize=(15,10))
+```
+
+### Observation
+
+- Many features were skewed.
+- Some variables showed non-normal distribution.
+
+---
+
+## 6. Outlier Detection
+
+Boxplots were used to detect outliers.
+
+```python
+sns.boxplot(data=df)
+```
+
+### Observation
+
+Outliers were found in:
+
+- Solids
+- Sulfate
+- Conductivity
+- Trihalomethanes
+
+### Handling Method
+
+Winsorization was applied to reduce the impact of extreme values.
+
+---
+
+## 7. Correlation Analysis
+
+Correlation between features was analyzed using a heatmap.
+
+```python
+plt.figure(figsize=(12,8))
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
+```
+
+### Observation
+
+- Moderate relationships existed between several features.
+- No severe multicollinearity was observed.
+
+---
+
+## 8. Feature Engineering
+
+Additional features were created to improve model performance.
+
+### Engineered Features
+
+- ph_deviation
+- mineral_load
+- chloramines_conductivity
+- thm_per_carbon
+- turbidity_solids_ratio
+
+### Observation
+
+Engineered features improved class separation and prediction accuracy.
+
+---
+
+## 9. Pairplot Analysis
+
+Pairplots were used to visualize class separation.
+
+```python
+sns.pairplot(df, hue='Potability')
+```
+
+### Observation
+
+Some overlap existed between classes, but engineered features improved separability.
+
+---
+
+# EDA Conclusion
+
+The Exploratory Data Analysis revealed:
+
+- Presence of missing values and outliers
+- Imbalanced target classes
+- Skewed feature distributions
+- Useful feature relationships
+- Importance of preprocessing and feature engineering
+
+EDA played a crucial role in improving data quality and enhancing machine learning model performance.
+
+---
 
 ##  Models Implemented
 
