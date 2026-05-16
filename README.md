@@ -295,6 +295,7 @@ App link: https://predictiveanalyticsproject-2app.streamlit.app/
 <img width="750" height="429" alt="image" src="https://github.com/user-attachments/assets/a7534694-1bb5-4b72-95ee-3c54849e7c12" />
 <img width="690" height="534" alt="image" src="https://github.com/user-attachments/assets/e3dbdb31-7b05-4466-8f85-99a863841be4" />
 <img width="675" height="493" alt="image" src="https://github.com/user-attachments/assets/5c8d12a8-3a16-46de-8ab4-cebe6e2ed484" />
+<img width="1296" height="532" alt="image" src="https://github.com/user-attachments/assets/d752931f-b893-4d1a-a428-244edf1fc968" />
 
 
 
