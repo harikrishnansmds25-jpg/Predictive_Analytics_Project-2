@@ -4,7 +4,7 @@ An end-to-end machine learning project for classifying water samples as **potabl
 
  ## 👩‍💻 Team Members
 - HARIKRISHNAN S.M  
-- ABHITHA RAJ .S .R 
+- ABHITHA RAJ .S.R 
 - AYANA SANTHOSH KHAN
 
 ## Course Details
